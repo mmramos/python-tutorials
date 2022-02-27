@@ -1,4 +1,15 @@
 
+# In this Python Object-Oriented Tutorial, we will be learning about classmethods
+# and staticmethods. Class methods are methods that automatically take 
+# the class as the first argument. Class methods can also be used as alternative
+# constructors. Static methods do not take the instance or the class as the first argument.
+# They behave just like normal functions, yet they should have some logical connection 
+# to our class. We will look at some examples of both of these in order to understand 
+# both in depth. Let's get started.
+
+# link: https://www.youtube.com/watch?v=rq8cL2XMM5M
+# !!! ADAPTED !!!
+
 
 # %%
 
@@ -49,4 +60,5 @@ def display_info(name, age):
 
 display_info("John", 25)
 display_info("Travis", 30)
+
 # %%
