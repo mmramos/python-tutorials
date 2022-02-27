@@ -124,26 +124,3 @@ display_info("Travis", 30)
 # ANOTHER CLASS TEST: Executed After display_info 
 
 # %%
-
-class decorator_class_1(object):
-
-    def __init__(self, prefix):
-        self.prefix = prefix
-
-    def __call__(self, original_function):
-        def wrapper(*args, **kwargs):
-            self.wrapper_obj(original_function, *args, **kwargs)
-        return wrapper
-
-    def wrapper_obj(self, function, *args, **kwargs):
-        print(self.prefix, "Executed Before",function.__name__)
-        result = function(*args, **kwargs)
-        print(self.prefix, "Executed After",function.__name__, "\n")
-        return result
-        
-@decorator_class_1("ANOTHER CLASS TEST:")
-def display_info(name, age):
-    print("display_info with arguments {} {}".format(name, age))
-
-display_info("John", 25)
-display_info("Travis", 30)

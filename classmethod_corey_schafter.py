@@ -10,7 +10,6 @@
 # link: https://www.youtube.com/watch?v=rq8cL2XMM5M
 # !!! ADAPTED !!!
 
-
 # %%
 
 class decorator_class_0(object):
@@ -32,6 +31,14 @@ def display_info(name, age):
 
 display_info("John", 25)
 display_info("Travis", 30)
+
+# CLASS TEST: Executed Before display_info
+# display_info with arguments John 25
+# CLASS TEST: Executed After display_info 
+
+# CLASS TEST: Executed Before display_info
+# display_info with arguments Travis 30
+# CLASS TEST: Executed After display_info 
 
 # %%
 
@@ -60,5 +67,13 @@ def display_info(name, age):
 
 display_info("John", 25)
 display_info("Travis", 30)
+
+# ##### Executed Before display_info
+# display_info with arguments John 25
+# ##### Executed After display_info 
+
+# ##### Executed Before display_info
+# display_info with arguments Travis 30
+# ##### Executed After display_info 
 
 # %%

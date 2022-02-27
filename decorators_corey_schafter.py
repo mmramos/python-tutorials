@@ -22,7 +22,7 @@ def outer_function():
 
 outer_function()
 
-#$ "Hi"
+# "Hi"
 
 # %%
 
@@ -36,7 +36,7 @@ def outer_function_0():
 my_func_0 = outer_function_0()
 my_func_0()
 
-#$ "Hi"
+# "Hi"
 
 # %%
 
@@ -51,8 +51,8 @@ bye_func_1 = outer_function_1("Bye")
 hi_func_1()
 bye_func_1()
 
-#$ "Hi"
-#$ "Bye"
+# "Hi"
+# "Bye"
 
 # %%
 
@@ -67,8 +67,8 @@ bye_func_2 = decorator_function_0("Bye")
 hi_func_2()
 bye_func_2()
 
-#$ "Hi"
-#$ "Bye"
+# "Hi"
+# "Bye"
 
 # %%
 
@@ -83,7 +83,7 @@ def display():
 decorated_display = decorator_function_1(display)
 decorated_display()
 
-#$ "display function executed"
+# "display function executed"
 
 # %%
 
@@ -100,8 +100,8 @@ def display():
 decorated_display = decorator_function_2(display)
 decorated_display()
 
-#$ wrapper executed this before display
-#$ display function executed
+# wrapper executed this before display
+# display function executed
 
 # %%
 
@@ -132,6 +132,8 @@ def display_info_0(name, age):
 
 display_info_0("Mario",210)
 
+# wrapper executed this before display_info_0
+# display with arguments Mario 210
 
 # %%
 
@@ -152,6 +154,9 @@ def display_info_0(name, age):
 
 display_info_0("Mario",210)
 
+# call method executed this before display_info_0
+# display with arguments Mario 210
+
 # %%
 
 # helps in the case of the usage of two decorators
@@ -171,3 +176,8 @@ def display_info_0(name, age):
     print("display with arguments {} {}".format(name, age))
 
 display_info_0("Mario",210)
+
+# wrapper executed this before display_info_0
+# display with arguments Mario 210
+
+# %%
